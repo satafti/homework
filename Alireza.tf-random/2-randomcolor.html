@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style type="text/css">
+	body {
+		background-color: black;
+	}
+	div.box div {
+		width: 10px;
+		height: 10px;
+		margin: 5px;
+		border-radius: 8px;
+		float: left;
+		-webkit-transition: all 500ms
+	}
+
+
+</style>
+<body>
+	<div class="box">
+		<script type="text/javascript">
+		var max=5000
+		for(i=0;i<max;i++){
+		document.write('<div class="box"></div>')
+		}
+
+		var divs=document.getElementsByClassName('box').item(0).getElementsByTagName('div')
+		function choose1 () {
+			r = Math.floor(Math.random()*max);
+			h = Math.floor(Math.random()*300);
+			divs.item(r).style.backgroundColor="HSL("+h+",90%,50%)"
+		}
+		setInterval(choose1,1)
+		</script>
+	</div>	
+</body>
+</html>
